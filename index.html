@@ -1,1 +1,164 @@
-index
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #919191;
+  padding: 5px;
+  border-radius:10px;
+  max-width:300px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 1);
+  margin:2px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.grid-cell {
+
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 15px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+</style>
+<script>
+function createGrid(){
+var conatiner=document.getElementById("grid-container");
+
+      for(var i=0;i<9;i++){
+          var box = document.createElement("div");
+          box.classList.add("grid-item");
+
+      for(var j=0;j<9;j++){
+          var item = document.createElement("div");
+          item.classList.add("grid-cell");
+          var id=parseInt(i*9+j);
+          item.setAttribute("id", "cell_"+id);
+          item.onclick=function () {
+                alert(this.id);
+            };
+          item.innerText = "1";
+          box.appendChild(item);
+      }
+		conatiner.appendChild(box);
+	  }
+}
+
+</script>
+</head>
+<body onload="createGrid()">
+
+<h1>Grid Elements</h1>
+
+<div id="grid-container">
+</div>
+
+<!--
+<div class="grid-container">
+  <div class="grid-item">
+    <div class="grid-cell">1     </div>
+     <div class="grid-cell">1     </div>
+      <div class="grid-cell">1     </div>
+       <div class="grid-cell">1     </div>
+        <div class="grid-cell">1     </div>
+         <div class="grid-cell">1     </div>
+          <div class="grid-cell">1     </div>
+           <div class="grid-cell">1     </div>
+            <div class="grid-cell">1     </div>
+  </div>
+  <div class="grid-item">
+  <div class="grid-cell">1     </div>
+   <div class="grid-cell">1     </div>
+      <div class="grid-cell">1     </div>
+       <div class="grid-cell">1     </div>
+        <div class="grid-cell">1     </div>
+         <div class="grid-cell">1     </div>
+          <div class="grid-cell">1     </div>
+           <div class="grid-cell">1     </div>
+            <div class="grid-cell">1     </div></div>
+  <div class="grid-item">
+   <div class="grid-cell">1     </div>
+     <div class="grid-cell">1     </div>
+      <div class="grid-cell">1     </div>
+       <div class="grid-cell">1     </div>
+        <div class="grid-cell">1     </div>
+         <div class="grid-cell">1     </div>
+          <div class="grid-cell">1     </div>
+           <div class="grid-cell">1     </div>
+            <div class="grid-cell">1     </div>
+  </div>  
+    <div class="grid-item">
+    <div class="grid-cell">1     </div>
+     <div class="grid-cell">1     </div>
+      <div class="grid-cell">1     </div>
+       <div class="grid-cell">1     </div>
+        <div class="grid-cell">1     </div>
+         <div class="grid-cell">1     </div>
+          <div class="grid-cell">1     </div>
+           <div class="grid-cell">1     </div>
+            <div class="grid-cell">1     </div>
+  </div>
+  <div class="grid-item">
+  <div class="grid-cell">1     </div>
+   <div class="grid-cell">1     </div>
+      <div class="grid-cell">1     </div>
+       <div class="grid-cell">1     </div>
+        <div class="grid-cell">1     </div>
+         <div class="grid-cell">1     </div>
+          <div class="grid-cell">1     </div>
+           <div class="grid-cell">1     </div>
+            <div class="grid-cell">1     </div></div>
+  <div class="grid-item">
+   <div class="grid-cell">1     </div>
+     <div class="grid-cell">1     </div>
+      <div class="grid-cell">1     </div>
+       <div class="grid-cell">1     </div>
+        <div class="grid-cell">1     </div>
+         <div class="grid-cell">1     </div>
+          <div class="grid-cell">1     </div>
+           <div class="grid-cell">1     </div>
+            <div class="grid-cell">1     </div>
+  </div> 
+    <div class="grid-item">
+    <div class="grid-cell">1     </div>
+     <div class="grid-cell">1     </div>
+      <div class="grid-cell">1     </div>
+       <div class="grid-cell">1     </div>
+        <div class="grid-cell">1     </div>
+         <div class="grid-cell">1     </div>
+          <div class="grid-cell">1     </div>
+           <div class="grid-cell">1     </div>
+            <div class="grid-cell">1     </div>
+  </div>
+  <div class="grid-item">
+  <div class="grid-cell">1     </div>
+   <div class="grid-cell">1     </div>
+      <div class="grid-cell">1     </div>
+       <div class="grid-cell">1     </div>
+        <div class="grid-cell">1     </div>
+         <div class="grid-cell">1     </div>
+          <div class="grid-cell">1     </div>
+           <div class="grid-cell">1     </div>
+            <div class="grid-cell">1     </div></div>
+  <div class="grid-item">
+   <div class="grid-cell">1     </div>
+     <div class="grid-cell">1     </div>
+      <div class="grid-cell">1     </div>
+       <div class="grid-cell">1     </div>
+        <div class="grid-cell">1     </div>
+         <div class="grid-cell">1     </div>
+          <div class="grid-cell">1     </div>
+           <div class="grid-cell">1     </div>
+            <div class="grid-cell">1     </div>
+  </div> 
+</div>-->
+
+</body>
+</html>
+
+
