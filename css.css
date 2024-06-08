@@ -1,0 +1,29 @@
+#grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto;
+    background-color: #919191;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 300px;
+}
+.grid-box {
+    background-color: lightgrey;
+    display: grid;
+    padding: 5px;
+    font-size: 15px;
+    text-align: center;
+    margin: 1px;
+}
+.grid-cell-right-border{
+    border-right: 3px solid black;
+}
+.grid-cell-bottom-border{
+    border-bottom: 3px solid black;
+}
+.selected-cell {
+    background-color: rgba(255,0, 0, 1);
+    color: white;
+}
+.possible-cell {
+    background-color: lightskyblue;   
+}
